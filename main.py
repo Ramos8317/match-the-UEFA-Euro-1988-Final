@@ -7,21 +7,21 @@ __human_name__ = 'strings'
 #part 1 EUFA Euro 1988 Final
 
 scorer1 = 'Ruud Gullit'    #1
-scorer2 = 'Marco Van Basten'
+scorer2 = 'Marco van Basten'
 
 # time mark of a goal 
 goal_0 = 32       #2
 goal_1 = 54
 
-scorers = 'Ruud Gullit'+' 32, Marco van Basten '+'54'
+scorers = scorer1  + ' ' + str(goal_0) +',' + ' ' + scorer2 + ' ' + str(goal_1)
 
-Report = f'{scorer1} scored in the {goal_0}nd minute\n{scorer2} scored in the {goal_1}th minute'  #4
+report = f'{scorer1} scored in the {goal_0}nd minute\n{scorer2} scored in the {goal_1}th minute'  
 
 #part 2 #1
-player = 'Ronald_Koeman'
-first_name = player.find('ronald')  
-last_name_len = player[7:len(player)]               #koeman   
-name_short = (player[0]) +'.'+ f'{last_name_len}'   #R. Koeman
+player = 'Ronald Koeman'
+first_name = player[:player.find(' ')]
+last_name_len = len(player[0:6])                    #koeman   
+name_short = (player[0]) +'.'+ ' ' + (player[7:13]) #R. Koeman
 
-chant = 'Koeman! '*6
-good_chant = (chant!=6)
+chant = ('Ronald! '* 6).rstrip()
+good_chant = bool(chant)
